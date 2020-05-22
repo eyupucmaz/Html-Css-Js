@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+    <meta lang="en-US">
+    <title>Color Swapping</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        .window {
+            background-color: black;
+            margin: auto;
+            height: 150px;
+            width: 250px;
+            margin-top: 5%;
+            border: 5px solid rgb(150, 95, 95);
+            border-radius: 10px;
+        }
+        
+        .buttons {
+            margin: 20px;
+        }
+        
+        .btn {
+            height: 50px;
+            width: 50px;
+            border: 5px solid rgb(150, 95, 95);
+            border-radius: 50%;
+        }
+        
+        #c1 {
+            background-color: blueviolet;
+        }
+        
+        #c2 {
+            background-color: chocolate;
+        }
+        
+        #c3 {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="project" style="padding: 0;">
+        <h1 style="color: orangered; font-weight: bold; font-size: 30px; margin-bottom: 0;">PROJECT 1</h1>
+        <h1 style="color: darkblue; font-size: 60px;  font-weight: bold; margin-top: 0;">COLORSWAP</h1>
+        <p style="margin-top: 0; color: darkblue; font-size: 20px;">
+            Change the background color of the container <br> by choosing one of the other color.
+        </p>
+    </div>
+    <button class="window" id="window"></button>
+
+    <div class="buttons">
+        <button class="btn" id="c1" type="button" onclick="change1()"></button>
+        <button class="btn" id="c2" type="button" onclick="change2()"></button>
+        <button class="btn" id="c3" type="button" onclick="change3()"></button>
+    </div>
+
+    <script>
+        function change1() {
+            var c1 = document.getElementById("c1");
+            var bg_c1 = getComputedStyle(c1).backgroundColor;
+
+            var window = document.getElementById('window');
+            //var bg_window = getComputedStyle(window).backgroundColor;
+
+            window.style.backgroundColor = bg_c1;
+            //c1.style.backgroundColor = bg_window;
+        }
+
+        function change2() {
+            var c2 = document.getElementById("c2");
+            var bg_c2 = getComputedStyle(c2).backgroundColor;
+
+            var window = document.getElementById('window');
+            //var bg_window = getComputedStyle(window).backgroundColor;
+
+            window.style.backgroundColor = bg_c2;
+            //c2.style.backgroundColor = bg_window;
+        }
+
+        function change3() {
+            var c3 = document.getElementById("c3");
+            var bg_c3 = getComputedStyle(c3).backgroundColor;
+
+            var window = document.getElementById('window');
+            //var bg_window = getComputedStyle(window).backgroundColor;
+
+            window.style.backgroundColor = bg_c3;
+            //c3.style.backgroundColor = bg_window;
+        }
+    </script>
+</body>

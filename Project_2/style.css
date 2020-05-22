@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    background-color: rgb(193, 222, 231);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+#id_num {
+    font-size: 80px;
+    font-weight: bold;
+    color: orangered;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+.items {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 16px;
+}
+
+.item {
+    padding: 25px;
+}
+
+.btn {
+    background-color: rgb(193, 222, 231);
+    width: 80px;
+    height: 80px;
+    border: 5px solid white;
+    border-radius: 50%;
+    font-size: 40px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <meta lang="en-US">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="project" style="padding: 0;">
+        <h1 style="color: orangered; font-weight: bold; font-size: 30px; margin-bottom: 0;">PROJECT 2</h1>
+        <h1 style="color: darkblue; font-size: 60px;  font-weight: bold; margin-top: 0; margin-bottom: 0;">COUNTER</h1>
+        <p style="margin-top: 0; color: darkblue; font-size: 20px;">
+            Counter with buttons
+        </p>
+    </div>
+    <div class="container">
+        <ul class="items">
+            <li class="item">
+                <button class="btn" onclick="minus()">-</button>
+            </li>
+            <li class="item" id="id_num">
+                0
+            </li>
+            <li class="item">
+                <button class="btn" onclick="plus()">+</button>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var num = 0;
+
+        function minus() {
+            num -= 1;
+            document.getElementById('id_num').innerHTML = num;
+        };
+
+        function plus() {
+            num += 1;
+            document.getElementById('id_num').innerHTML = num;
+        }
+    </script>
+</body>

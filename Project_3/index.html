@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta lang="en-US">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down</title>
+    <style>
+        body {
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        p {
+            font-size: 55px;
+        }
+        
+        #date_inner,
+        #time_inner {
+            font-size: 15px;
+            color: orangered;
+            border: 2px solid darkblue;
+            padding: 3px;
+        }
+        
+        #set_counter {
+            padding: 5px;
+            font-size: 19px;
+            border: 2px solid darkblue;
+            height: 40px;
+            border-radius: 40%;
+            color: orangered;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="project" style="padding: 0;">
+        <h1 style="color: orangered; font-weight: bold; font-size: 30px; margin-bottom: 0;">PROJECT 3</h1>
+        <h1 style="color: darkblue; font-size: 60px;  font-weight: bold; margin-top: 0; margin-bottom: 0;">COUNTDOWN
+        </h1>
+        <p style="margin-top: 0; color: darkblue; font-size: 20px;">
+            Create a counter that counts the second.<br>Either set a fixed date and time or create a user <br> interface to pass them to your function.
+        </p>
+    </div>
+    <div id="counter">
+        <input type="date" id="date_inner">
+        <input type="time" id="time_inner">
+        <p id="counter_id" style="color: orangered;"></p>
+    </div>
+
+
+
+    <script>
+        function set_time() {
+            //var countDownDate = new Date(2020, 4, 20, 19, 51, 00).getTime();
+            var month = new Array(12);
+            month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            var inner_date = document.getElementById("date_inner");
+            var date_value = inner_date.value;
+            var inner_time = document.getElementById("time_inner");
+            var time_value = inner_time.value;
+            //console.log(date_value + " " + time_value);
+            var full_date = date_value + " " + time_value;
+            var c_year = Number(full_date.slice(0, 4));
+            var c_month = Number(full_date.slice(5, 7));
+            //c_month = month[c_month - 1];
+            var c_date = Number(full_date.slice(8, 10));
+            var c_hour = Number(full_date.slice(11, 13));
+            var c_min = Number(full_date.slice(14, 17));
+            var countDownDate = new Date(c_year, c_month - 1, c_date, c_hour, c_min, 00).getTime();
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (days == 0 && hours != 0) {
+
+                document.getElementById("counter_id").innerHTML = hours + " Hours " +
+                    minutes + " Min " + seconds + " Sec ";
+            } else if (hours == 0 && days == 0) {
+                document.getElementById("counter_id").innerHTML = minutes + " Min " + seconds + " Sec ";
+            } else if (minutes == 0) {
+                document.getElementById("counter_id").innerHTML = seconds + " Sec ";
+            } else {
+                document.getElementById("counter_id").innerHTML = days + " Day " + hours + " Hours " +
+                    minutes + " Min " + seconds + " Sec ";
+            }
+
+        }
+        window.setInterval(set_time, 500);
+    </script>
+</body>
+
+</html>
