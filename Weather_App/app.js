@@ -28,13 +28,8 @@ window.addEventListener('load', () => {
                     console.log(iconUrl);
                     icon.style.backgroundImage = 'url(' + iconUrl + ')';
                 });
-
         });
-
-
-
     } else {
         alert('Please Accept The Location Permission');
     }
-
 });
