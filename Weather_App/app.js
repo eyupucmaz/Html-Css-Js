@@ -29,8 +29,6 @@ window.addEventListener('load', () => {
                     icon.style.backgroundImage = 'url(' + iconUrl + ')';
                 });
 
-
-
         });
 
 
