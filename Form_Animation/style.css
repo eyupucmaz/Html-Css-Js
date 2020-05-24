@@ -29,9 +29,10 @@ body {
     border-radius: 5px;
     transition: all 0.5s ease;
 }
+
 .field-name input,
 .field-email input,
-.field-pass input{
+.field-pass input {
     background: none;
     border: none;
     flex: 1;
