@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+.background-img {
+    position: fixed;
+    height: 100vh;
+}
+.background-img .login-back {
+    position: relative;
+    margin: 40px;
+    left: 65%;
+    height: 90%;
+}
+.container {
+    position: absolute;
+    margin: 11% 7%;
+    width: 50%;
+    height: 70%;
+}
+.content {
+    padding: 0;
+    font-size: 72px;
+    font-family: "Roboto";
+    font-weight: 100;
+    color: #541388;
+}
+.login {
+    margin-top: 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.login-username,
+.login-password {
+    color: #581292;
+    padding-left: 8px;
+    height: 55px;
+    font-size: 35px;
+    margin: 10px 0px;
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 10px;
+    outline: none;
+    font-family: "Roboto";
+    opacity: 0.6;
+}
+.login-username:focus,
+.login-password:focus {
+    opacity: 1;
+    color: #541388;
+}
+.login-username::placeholder,
+.login-password::placeholder {
+    color: #531388b0;
+}
+.login-button {
+    position: relative;
+    width: 140px;
+    height: 60px;
+    left: 66%;
+    border: none;
+    border-radius: 29px;
+    background: rgb(123, 0, 44);
+    background: linear-gradient(
+        0deg,
+        rgba(123, 0, 44, 1) 0%,
+        rgba(245, 0, 87, 0.75) 61%
+    );
+    color: #fbfbfb;
+    font-size: 40px;
+    outline: none;
+    cursor: pointer;
+}
+.login-button:hover {
+    color: #fbfbfbc9;
+    background: rgb(123, 0, 44);
+    background: linear-gradient(
+        0deg,
+        rgba(123, 0, 44, 1) 0%,
+        rgba(245, 0, 87, 0.75) 20%
+    );
+}

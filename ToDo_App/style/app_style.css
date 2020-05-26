@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: rgb(245, 0, 87);
+    background: linear-gradient(
+        0deg,
+        rgba(245, 0, 87, 0.48) 0%,
+        rgba(84, 19, 136, 0.48) 100%
+    );
+}
+.background-img {
+}
+
+.app-back {
+    position: fixed;
+    bottom: 0px;
+    height: auto;
+    z-index: -20;
+}
+.header {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 400%;
+    color: #f1e9da;
+}
+.content #logo {
+    color: #ffd400;
+    transform: rotate(30deg);
+}
+
+.input {
+    margin-top: 30px;
+    position: relative;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-note {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 13px;
+    font-size: 30px;
+    padding-left: 5px;
+    outline: none;
+    color: #541388;
+}
+.input-note::placeholder {
+    color: #531388a6;
+}
+.input-button {
+    border-bottom: 1px solid rgb(112, 112, 112);
+    border-top: 1px solid rgb(112, 112, 112);
+    border-right: 1px solid rgb(112, 112, 112);
+    border-radius: 13px;
+    position: relative;
+    left: 50%;
+    cursor: pointer;
+}
+.line {
+    margin-top: 20px;
+    background-color: #ffd400;
+    height: 6px;
+    width: 60%;
+    border-radius: 2px;
+}
+@media only screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background: rgb(245, 0, 87);
+        background: linear-gradient(
+            0deg,
+            rgba(245, 0, 87, 0.48) 0%,
+            rgba(84, 19, 136, 0.48) 100%
+        );
+    }
+    .app-back {
+        height: auto;
+        width: 100%;
+        z-index: -20;
+    }
+    .content {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-size: 200%;
+        color: #f1e9da;
+    }
+    .input {
+        width: 70%;
+    }
+    .line {
+        width: 100%;
+    }
+}

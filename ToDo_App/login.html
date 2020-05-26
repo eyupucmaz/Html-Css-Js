@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style/login_style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="background-img">
+            <img
+                class="login-back"
+                src="img/login_back.svg"
+                alt="man takes note"
+            />
+        </div>
+        <div class="container">
+            <h1 class="content">Login & Take Note</h1>
+            <div class="login">
+                <input
+                    class="login-username"
+                    type="text"
+                    placeholder="Username"
+                    required
+                />
+                <input
+                    class="login-password"
+                    type="password"
+                    placeholder="Password"
+                    required
+                />
+                <button class="login-button" onclick="check()">Login</button>
+            </div>
+        </div>
+        <script>
+            function check() {
+                let appUrl = "./app.html";
+                let username = document.querySelector(".login-username");
+                let password = document.querySelector(".login-password");
+                let loginBtn = document.querySelector(".login-button");
+                //console.log(typeof password.value);
+                if (username.value === "eyup" && password.value === "201") {
+                    document.location.href = appUrl;
+                } else {
+                    alert("Please Check Username or Password");
+                }
+            }
+        </script>
+    </body>
+</html>
